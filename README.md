@@ -1,4 +1,6 @@
 # webpack
-基于webpack的前端工程化开发解决方案探索
-> * [基于webpack的前端工程化开发解决方案探索（一）：动态生成HTML](http://www.cnblogs.com/souvenir/p/5015418.html)
-> * [基于webpack的前端工程化开发解决方案探索（二）：代码分割与图片加载](http://www.cnblogs.com/souvenir/p/5017037.html )
+处理简单PC页面的模块化
+
+#使用方法
+**npm run test** 在本地8080端口起测试服务
+**npm run online** 打包上线代码，会把链接替换为线上地址，直接发布dist包即可
