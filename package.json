@@ -1,0 +1,35 @@
+{
+  "name": "webpack-component",
+  "version": "1.0.0",
+  "description": "处理简单PC模块化业务",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack & webpack-dev-server --hot --inline --progress --colors --port 8080",
+    "online": "webpack --config online.config.js & webpack-dev-server --hot --inline --progress --colors --port 8080 --config online.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MJSJ/webpack-component.git"
+  },
+  "keywords": [
+  ],
+  "author": "yursile",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "css-loader": "^0.23.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.0",
+    "html-webpack-plugin": "^1.7.0",
+    "jquery": "^1.11.3",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "open-browser-webpack-plugin": "0.0.2",
+    "postcss-loader": "^0.10.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
+  }
+}
