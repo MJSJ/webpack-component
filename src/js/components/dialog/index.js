@@ -1,6 +1,6 @@
 (function(){
 	//加载模块CSS
-	require('./dialog.css');
+	require('./dialog.less');
 	//加载模板
 	var html=require('./dialog.html');
 	

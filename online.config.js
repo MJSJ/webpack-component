@@ -8,7 +8,7 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 module.exports={
 	entry:{
     		index:"./src/js/page/index.js",
-            sb:"./src/js/page/sb.js"
+            vender:["./src/js/tools/response.js"]
     	},
     output:{
         path: path.join(__dirname,'dist'),
@@ -20,11 +20,16 @@ module.exports={
         loaders: [	//加载器
             {
                 test: /\.less$/,
-                loader: 'style!css!postcss!less'
+                loader: 'style!css!px2rem?remUnit=75&remPrecision=8!postcss!less'
+            },
+             {
+                test: /\.js[x]?$/,
+                exclude: /node_modules/,
+                loader: 'babel'
             },
             {
                 test: /\.css$/, 
-                loader:ExtractTextPlugin.extract("style", "css","postcss") 
+                loader:ExtractTextPlugin.extract("style", "css-loader?-minimize","px2rem-loader?remUnit=75&remPrecision=8","postcss") 
             },
             {
                 test: /\.html$/, 
@@ -38,9 +43,15 @@ module.exports={
     },
     postcss: [autoprefixer],
     plugins:[
+        new webpack.DefinePlugin({
+            'process.env': {
+              'NODE_ENV': JSON.stringify('production')
+            }
+        }),
     	new webpack.ProvidePlugin({	//加载jq
             $: 'jquery'
         }),
+        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vender", /* filename= */"vendor.bundle.js"),
     	new ExtractTextPlugin("css/[name].css"),	//单独使用style标签加载css并设置其路径
     	new webpack.optimize.UglifyJsPlugin({	//压缩代码
 		    compress: {

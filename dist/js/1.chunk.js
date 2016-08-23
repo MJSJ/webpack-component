@@ -1,1 +1,87 @@
-webpackJsonp([1],[,,,,,,,,,,,,,function(n,o,i){(function(o){!function(){i(14);var p=i(16);n.exports=function(n){o("body").append(p),o(".dialog>span").last().text(n)}}()}).call(o,i(1))},function(n,o,i){var p=i(15);"string"==typeof p&&(p=[[n.id,p,""]]);i(5)(p,{});p.locals&&(n.exports=p.locals)},function(n,o,i){o=n.exports=i(4)(),o.push([n.id,".dialog{\r\n	margin-bottom: 20px;\r\n	padding:30px;\r\n	color: #FF9900;\r\n	border: 1px solid #FF9900;\r\n}\r\n",""])},function(n,o,i){n.exports='<div class=dialog><span></span> <img src="'+i(17)+'"></div>'},function(n,o,i){n.exports=i.p+"./img/f903e75e14c494cbd6eeba1dc1480dbb.jpg"}]);
+webpackJsonp([1],[
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	(function () {
+		//加载模块CSS
+		__webpack_require__(15);
+		//加载模板
+		var html = __webpack_require__(17);
+
+		module.exports = function (text) {
+			$('body').append(html);
+			$('.dialog>span').last().text(text);
+		};
+	})();
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(16);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/px2rem-loader/index.js?remUnit=75&remPrecision=8!./../../../../node_modules/postcss-loader/index.js!./../../../../node_modules/less-loader/index.js!./dialog.less", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/px2rem-loader/index.js?remUnit=75&remPrecision=8!./../../../../node_modules/postcss-loader/index.js!./../../../../node_modules/less-loader/index.js!./dialog.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".dialog {\n  margin-bottom: 0.26666667rem;\n  padding: 0.4rem;\n  color: #FF9900;\n  border: 0.01333333rem solid #FF9900;\n}", ""]);
+
+	// exports
+
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = "<div class=\"dialog\">\n\t<span></span>\n\t<img src=\"" + __webpack_require__(18) + "\" />\n</div>\r\n";
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./img/f903e75e14c494cbd6eeba1dc1480dbb.jpg";
+
+/***/ }
+]);
