@@ -10818,8 +10818,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/px2rem-loader/index.js?remUnit=75&remPrecision=8!./../../../node_modules/postcss-loader/index.js!./../../../node_modules/less-loader/index.js!./hello.less", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/px2rem-loader/index.js?remUnit=75&remPrecision=8!./../../../node_modules/postcss-loader/index.js!./../../../node_modules/less-loader/index.js!./hello.less");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./hello.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./hello.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10837,7 +10837,7 @@
 
 
 	// module
-	exports.push([module.id, "#btn {\n  width: 2.66666667rem;\n}", ""]);
+	exports.push([module.id, "@bw:200px;\n#btn{\n\twidth: @bw;\n}", ""]);
 
 	// exports
 

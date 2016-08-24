@@ -47,8 +47,8 @@ webpackJsonp([1],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/px2rem-loader/index.js?remUnit=75&remPrecision=8!./../../../../node_modules/postcss-loader/index.js!./../../../../node_modules/less-loader/index.js!./dialog.less", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/px2rem-loader/index.js?remUnit=75&remPrecision=8!./../../../../node_modules/postcss-loader/index.js!./../../../../node_modules/less-loader/index.js!./dialog.less");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./dialog.less", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./dialog.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -66,7 +66,7 @@ webpackJsonp([1],[
 
 
 	// module
-	exports.push([module.id, ".dialog {\n  margin-bottom: 0.26666667rem;\n  padding: 0.4rem;\n  color: #FF9900;\n  border: 0.01333333rem solid #FF9900;\n}", ""]);
+	exports.push([module.id, ".dialog{\r\n\tmargin-bottom: 20px;\r\n\tpadding:30px;\r\n\tcolor: #FF9900;\r\n\tborder: 1px solid #FF9900;\r\n}\r\n", ""]);
 
 	// exports
 
